@@ -1,0 +1,356 @@
+/* 
+    @title : main.css
+    @for : Alain COLMERAUER tribute website
+
+    @author : Guillaume RISCH
+    @author : Matthis HOULES
+
+    @brief : template stylesheet
+*/
+
+
+/* 
+    fonts imports
+
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+
+/* 
+    General presets
+*/
+* {
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    width : 100vw;
+    min-height : 100vh;
+    overflow-x : hidden;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+*:focus {
+    outline : none;
+}
+
+textarea {
+    outline : none;
+}
+
+
+
+/* 
+    header & components 
+        navbar
+*/
+header {
+    width : 100vw;
+    height : 60px;
+    
+    background-color : #fff;
+    border-bottom : 1px #e1e1e1 solid;
+
+    position : fixed;
+    top : 0;
+    z-index : 10;
+}
+.headerLogo {
+    height : 40px;
+    padding-right : 5px;
+    border-right : 1px solid #e1e1e1;
+    position: relative;
+    z-index : 12;
+}
+.navbarContainer {
+    padding : 10px;
+    background-color : #fff;
+
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between; 
+    align-items: center;
+    border-bottom : 1px #e1e1e1 solid;
+
+}
+
+.lisheaderLogo {
+    height : 70px;
+}
+
+.navLink {
+    font-family: 'montserrat', sans-serif;  
+    font-size : 17px;
+    text-decoration: none;
+    color : #646369;
+    padding : 10px;
+}
+.navLink:hover {
+    color : #000;
+    transition : 0.2s;
+}
+.navButton {
+    background-color : #73c6cb;
+    font-family: 'montserrat', sans-serif;  
+    font-size : 17px;
+    padding : 10px;
+    color : #fff;
+    border-radius : 5px;
+    text-decoration: none;
+}
+.navButton:hover {
+    background-color : #67b0b4;
+    transition : 0.2s;
+}
+
+.flag {
+    width : 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-right : 10px;
+}
+
+.linksContainer {
+    height : 100%;
+    border-right : 1px solid #e1e1e1;
+    padding-right : 5px;
+}
+.leftC {
+    display : flex;
+    flex-direction : row;
+    align-items: center;
+
+}
+
+.mobileFlagC {
+    display : flex;
+    flex-direction : row;
+    display : none;
+}
+
+#mobileMenuTrigger {
+    border : none;
+    background : none;
+    color : #646369;
+    transition : 0.2s;
+    font-size : 30px;
+    display : none;
+}
+#mobileMenuTrigger:hover {
+    cursor:  pointer;
+    color : #000;
+    transition : 0.2s;
+}
+
+
+
+/* switch to mobile navbar */
+@media screen and (max-width : 1030px) {
+    nav {
+        width : 100vw;
+        display : flex;
+        flex-direction : column;
+        position : fixed;
+        top : -200px;
+        background-color : #fff;
+        transition : 0.4s;
+        z-index : -1;
+        border-bottom : 1px #e1e1e1 solid;
+
+    }
+    nav.display {
+        top : 95px;
+        transition : 0.4s;
+    }
+    nav a {
+        width : 100%;
+        text-align: center;
+    }
+    nav a:hover {
+        background-color : #efefef;
+    }
+    .navbarContainer {
+        padding-left : 0px;
+        padding-right : 0px;
+    }
+    .deskF {
+        display : none;
+    }
+    #mobileMenuTrigger {
+        display : initial;
+        margin-right : 15px;
+    }
+    .headerLogo {
+        border : none;
+        padding-left : 15px;
+    }
+    .mobileFlagC {
+        display : flex;
+    }
+}
+
+@media screen and (max-width : 345px) {
+    .lisLink {
+        display : none;
+    }
+}
+
+/* 
+    swup animation
+*/
+.transition-fade {
+    opacity : 1;
+    transition : 0.4s;
+}
+html.is-animating .transition-fade {
+    opacity : 0;
+}
+
+
+
+/* 
+    animations
+*/
+@keyframes fadeinTranslate {
+    0% {
+        opacity : 0;
+        transform : translateY(35px);
+    }
+    100% {
+        opacity : 1;
+        transform : translateY(0);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity : 0;
+        transform : translateX(-50px);
+    }
+    70% {
+        opacity : 1;
+    }
+    100% {
+        opacity : 1;
+        transform : translateX(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+
+
+/* 
+    footer
+*/
+footer {
+    width : 100vw;
+    height : auto;
+
+    padding-top : 40px;
+    padding-bottom : 40px;
+
+    background-color : #000;
+
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items : center;
+    flex-wrap: wrap;
+}
+
+.map {
+    width : 320px;
+}
+
+.leftSide {
+    width : 320px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin : 20px;
+}
+
+.position {
+    color : #fff;
+    text-align: center;
+    margin-top : 15px;
+}
+
+.rightSide {
+    width : auto;
+
+    display : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items : center;
+    color : #fff;
+    flex-wrap: wrap;
+
+    margin : 20px;
+}
+.rightSide div {
+    width : 320px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerTitleContact {
+    font-size : 25px;
+    font-weight : 600;
+    margin-bottom : 10px;
+}
+
+.footerLinkContact {
+    font-size : 15px;
+    text-decoration: none;
+    color : #fff;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+
+.footerTitle {
+    font-size : 25px;
+    font-weight : 600;  
+    margin-top: 10px;
+}
+
+
+.footerLink {
+    font-size : 15px;
+    text-decoration: none;
+    color : #fff;
+    font-family: 'Montserrat', sans-serif;
+    
+    margin-top: 5px;
+}
+.footerLink:hover {
+    cursor : pointer;
+    text-decoration: underline;
+}
+
+
+
+/* 
+    notification
+*/

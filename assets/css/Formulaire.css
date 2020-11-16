@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    margin-top : 120px;
+    margin-bottom : 50px;
+}
+.title{
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size : 50px;
+    width : 80vw;
+}
+
+.title h1{
+    font-size : 35px;
+    width : 80vw;
+    word-wrap: break-word;
+}
+
+.title h2{
+    font-size: 26px;
+}
+
+form{
+    margin-top: 50px;
+
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+}
+
+.form-control{
+    max-width: 600px;
+    width : 80vw;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+.container div {
+    margin-bottom : 10px;
+}
+
+input[type="checkbox"]
+{
+    position: relative;
+    width: 32px;
+    height: 16px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px #BEBCBE;
+    transition: 0.5s;
+}
+
+input:checked[type="checkbox"]{
+
+    background: #67b0b4;
+
+}
+
+input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 20px;
+    top: 0;
+    left:0;
+    box-shadow: 0 2px 5px #BEBCBE;
+    transition: 0.5s;
+}
+
+input:checked[type="checkbox"]::before{
+    left: 16px;
+}
+
+
+
+
+label{
+    color: grey;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+
+input{
+    height: 45px;
+}
+
+.form-submit{
+    background: #67b0b4;
+    border-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 3%;
+}
+
+
+.form-submit:hover
+{
+    background-color: #73c6cb;
+    cursor: pointer;
+}

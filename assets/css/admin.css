@@ -1,0 +1,149 @@
+/* 
+    fonts imports
+
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width : 100vw;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+
+    padding-top : 25px;
+    padding-bottom : 15px;
+    border-bottom : 1px solid #e1e1e1;
+}
+
+.headerlogo {
+    width : 320px;
+    margin-bottom : 10px;
+}
+
+nav {
+    width : 20vw;
+    min-width : 320px;
+
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav a {
+    color : #000;
+    text-decoration: none;
+}
+
+main {
+    width : 80vw;
+    max-width : 1024px;
+    min-width : 320px;
+
+    margin-top : 25px;
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainTitle {
+    font-size : 40px;
+}
+.secondTitle {
+    font-size : 25px;
+    margin-bottom: 25px;
+}
+
+form {
+    width : 320px;
+    margin-bottom : 20px;
+}
+.row {
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+}
+form input {
+    width : 270px;
+    background-color : #fff;
+    border : 2px solid #5a989b;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    text-align: center;
+}
+
+form button {
+    padding : 10px;
+    border : none;
+    background-color : #5a989b;
+    color : #fff;
+    cursor: pointer;
+}
+
+
+.stats {
+    margin-bottom : 25px;
+    padding-bottom : 20px;
+    border-bottom : 1px solid #e1e1e1;
+}
+
+
+table {
+    border : 1px solid black;
+    width : 1024px;
+    border-collapse: collapse;
+}
+
+.registrationsContainer {
+    width : 100%;
+    overflow-x: auto;
+}
+
+tr td {
+    padding-top : 5px;
+    padding-bottom : 5px;
+    text-align: center;
+    border : none;
+}
+
+thead {
+    padding-bottom : 5px;
+    padding-top : 10px;
+    background-color : #e1e1e1;
+    border-bottom : 1px solid #000;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color : #fff;
+}
+tbody tr:nth-of-type(even) {
+    background-color : #f1f1f1;
+}
+
+.exportButton {
+    background-color : #5a989b;
+    font-size : 17px;
+    margin-top : 20px;
+    color : #fff;
+    cursor : pointer;
+    transition : 0.2s;
+}
+.exportButton:hover {
+    background-color : #467577;
+    transition : 0.2s;
+}

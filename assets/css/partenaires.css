@@ -1,0 +1,54 @@
+/* 
+    @title : main.css
+    @for : Alain COLMERAUER tribute website
+
+    @author : Guillaume RISCH
+    @author : Matthis HOULES
+
+    @brief : template stylesheet
+*/
+main {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+
+    margin-top : 150px;
+}
+body {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content: space-between;
+}
+
+.mainTitle {
+    font-family: 'ubuntu', sans-serif;
+    font-size : 50px;
+}
+
+.logo {
+    height : 150px;
+}
+
+.logoContainer {
+    width : 80vw;
+    min-width : 320px;
+
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 50px;
+    margin-bottom : 50px;
+
+    display : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    flex-wrap : wrap;
+}
+
+
+@media screen and (max-width : 488px) {
+    .logo {
+        width : 280px;
+        height : auto;
+    }
+}

@@ -1,0 +1,91 @@
+/**
+    @title : signin.css
+*/
+
+
+/* 
+    fonts imports
+
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    width : 100vw;
+    min-height : 100vh;
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
+    width : 33vw;
+    min-width : 320px;
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.logosContainer {
+    border-bottom : 1px solid #e1e1e1;
+
+    padding-bottom : 25px;
+    margin-bottom : 25px;
+
+    display : flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+}
+.logosContainer img {
+    width : 320px;
+}
+
+.form {
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+}
+
+.inputC {
+    width : 320px;
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom : 20px;
+}
+
+.inputC input {
+    width : 300px;
+    background-color : #fff;
+    border : 1px solid #000;
+
+    padding : 10px;
+}
+
+input[type="submit"] {
+    padding  : 10px;
+    background-color : #000;
+    border : none;
+    font-size : 15px;
+    color : #fff;
+    cursor : pointer;
+    transition : 0.2s;
+}
+input[type="submit"]:hover {
+    transform: translateY(-5px);
+    transition : 0.2s;
+}

@@ -1,0 +1,181 @@
+#InformationContainer {
+    width : 100vw;
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+main {
+    margin-top : 150px;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+}
+
+table {
+    width : 80vw;
+    max-width : 1024px;
+    min-width : 300px;
+
+    padding : 10px;
+    margin-bottom : 100px;
+
+    border-collapse: collapse;
+}
+
+tr td{
+    padding-top : 20px;
+    padding-bottom : 20px;
+    vertical-align: top;
+}
+
+tr .time {
+    border-bottom : 1px solid #e1e1e1;
+}
+
+.time {
+    width : 15%;
+    border-right : 1px solid #212121;
+    padding-right : 5px;
+    text-align: center;
+    font-family: 'montserrat', sans-serif;
+    font-size : 17px;
+}
+
+.content {
+    padding-left: 25px;
+}
+
+button.title, p.title {
+    background : none;
+    border : none;
+    transition : 0.2s ease-in-out;
+    font-size : 25px;
+    font-family: 'ubuntu', sans-serif;
+    font-weight : 600;
+    text-align: left;
+}
+button.title {
+    color : #55828B;
+}
+p.title.pause {
+    color : #87BBA2;
+}
+button.title:hover {
+    transform : translateX(10px);
+    transition : 0.2s;
+    cursor : pointer;
+}
+
+.member {
+    padding-left:  25px;
+
+    font-size : 14px;
+    color : #646369;
+}
+
+.datePart {
+    margin-top : 20px;
+    margin-bottom : 20px;
+    width : calc(100%-20px);
+    padding : 10px;
+    background : #67b0b4;
+    color : #fff;
+}
+
+.duration {
+    font-size : 14px;
+    color : #646369;
+}
+
+.mainTitle {
+    margin-top : 20px;
+    margin-bottom : 20px;
+    font-size : 50px;
+    font-family : 'ubuntu', sans-serif;
+    text-align : center;
+}
+
+.downloadProgramme {
+    margin-top : -50px;
+    margin-bottom : 50px;
+}
+
+.dlbutton {
+    padding : 10px;
+    background-color : #73c6cb;
+    transition : 0.2s;
+    color : #fff;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.dlbutton:hover {
+    background-color : #67b0b4;
+    transition : 0.2s;
+    cursor : pointer;
+}
+
+/* 
+    modals popups
+*/
+#modalOverlay {
+    width : 100vw;
+    height : 100vh;
+
+    position : fixed;
+    top : 0;
+    left : 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index : 15;
+
+    display : none;
+
+    transition : 0.4s;
+    opacity : 0;
+}
+#modalOverlay.display {
+    display : initial;
+    animation : fade 0.2s forwards;
+
+}
+
+#popupContainer {
+    width : 100vw;
+    height : 100vh;
+    position : fixed;
+    top : 0;
+    left : 0;
+
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: center;
+    display : none;
+    z-index : 16;
+
+    pointer-events: none;
+    opacity : 0;
+    transition : 0.4s;
+}
+#popupContainer.display {
+    display : flex;
+    animation : fade 0.2s forwards;
+}
+
+#popup {
+    width : 80vw;
+    max-width : 1024px;
+    min-width : 300px;
+
+    background-color : #fff;
+    padding : 10px;
+    padding-top : 50px;
+    padding-bottom : 50px;
+
+    position : relative;
+    z-index : 20;
+
+    pointer-events: initial;
+}
+
